@@ -1,1 +1,559 @@
-hola ktx
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KTX | Central Financiera Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        background-color: #050505;
+        background-image:
+          radial-gradient(circle at 20% 20%, rgba(255, 204, 84, 0.08), transparent 18%),
+          radial-gradient(circle at 80% 10%, rgba(255, 204, 84, 0.05), transparent 15%),
+          radial-gradient(circle at 50% 80%, rgba(255, 236, 179, 0.06), transparent 20%),
+          radial-gradient(circle at 15% 75%, rgba(255, 204, 84, 0.05), transparent 14%),
+          linear-gradient(180deg, #070707 0%, #0d0d0d 100%);
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02), transparent 10%),
+          repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 12px);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .glass {
+        background: rgba(12, 12, 12, 0.75);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 209, 102, 0.14);
+      }
+      .gold-border {
+        border-color: rgba(255, 209, 102, 0.32);
+      }
+      .gold-shadow {
+        box-shadow: 0 24px 80px rgba(255, 209, 102, 0.14);
+      }
+      .hero-gradient {
+        background: radial-gradient(circle at top, rgba(255, 193, 7, 0.16), transparent 30%),
+          radial-gradient(circle at 80% 10%, rgba(255, 213, 79, 0.12), transparent 16%);
+      }
+      .gold-glow:hover {
+        box-shadow: 0 16px 42px rgba(255, 193, 7, 0.28);
+        transform: translateY(-2px);
+      }
+      .text-gold {
+        color: #ffd166;
+      }
+      .text-gold-soft {
+        color: #f7c948;
+      }
+    </style>
+  </head>
+  <body class="text-slate-200 antialiased">
+    <div class="min-h-screen">
+      <header class="mx-auto max-w-7xl px-6 py-6 lg:px-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <a href="#" class="flex items-center gap-3 text-white">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-yellow-400 to-orange-500 text-xl font-bold shadow-lg shadow-amber-500/20">
+              K
+            </div>
+            <div>
+              <p class="text-lg font-semibold">KTX</p>
+              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Central financiera</p>
+            </div>
+          </a>
+          <nav class="hidden items-center gap-8 text-sm text-slate-400 md:flex">
+            <a href="#hero" class="transition hover:text-white">Inicio</a>
+            <a href="#investors" class="transition hover:text-white">Inversiones</a>
+            <a href="#debts" class="transition hover:text-white">Deudas</a>
+            <a href="#store" class="transition hover:text-white">Tienda</a>
+            <a href="#discord" class="transition hover:text-white">Discord</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <span class="rounded-full bg-slate-800/80 px-4 py-2 text-xs uppercase tracking-[0.22em] text-amber-200">Lanzamiento 2026</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
+        <section id="hero" class="grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+          <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 rounded-full bg-slate-800/80 px-4 py-2 text-sm text-sky-300 shadow-lg shadow-sky-500/10">
+              Plataforma centralizada para finanzas y gaming
+            </div>
+            <div class="space-y-6">
+              <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Todo en un solo lugar: inversiones, tienda, billetera y más
+              </h1>
+              <p class="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+                Gestiona tu dinero, compra servicios digitales y accede a beneficios exclusivos dentro de KTX.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 sm:flex-row">
+              <a href="#store" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/30 transition hover:-translate-y-1 hover:bg-amber-300">
+                Ver Tienda
+              </a>
+              <a href="#investors" class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/90 px-6 py-3 text-sm font-semibold text-white transition hover:border-amber-400 hover:text-amber-200">
+                Invertir
+              </a>
+              <a href="#wallet" class="inline-flex items-center justify-center rounded-full bg-slate-700/90 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-slate-600">
+                Acceder Wallet
+              </a>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <div class="glass rounded-3xl border border-white/10 p-5 shadow-xl shadow-slate-900/40">
+                <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Usuarios</p>
+                <p class="mt-3 text-3xl font-semibold text-white">12.4K</p>
+              </div>
+              <div class="glass rounded-3xl border border-white/10 p-5 shadow-xl shadow-slate-900/40">
+                <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Operaciones</p>
+                <p class="mt-3 text-3xl font-semibold text-white">S/ 184.5M</p>
+              </div>
+              <div class="glass rounded-3xl border border-white/10 p-5 shadow-xl shadow-slate-900/40">
+                <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Comunidad</p>
+                <p class="mt-3 text-3xl font-semibold text-white">+20K</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative isolate overflow-hidden rounded-[2.5rem] border border-amber-500/20 bg-slate-900/80 p-8 shadow-2xl shadow-amber-500/10">
+            <div class="absolute -left-10 top-6 h-32 w-32 rounded-full bg-amber-500/10 blur-3xl"></div>
+            <div class="absolute right-[-2rem] top-12 h-56 w-56 rounded-full bg-sky-400/10 blur-3xl"></div>
+            <div class="relative space-y-6">
+              <div class="flex items-center justify-between gap-4 rounded-3xl bg-slate-950/90 p-6 shadow-xl shadow-slate-950/20">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Balance total</p>
+                  <p class="mt-3 text-3xl font-semibold text-white">S/ 9,830.50</p>
+                </div>
+                <span class="rounded-2xl bg-amber-500/20 px-4 py-2 text-sm font-semibold text-amber-200">Activo</span>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl bg-slate-950/90 p-5 shadow-lg shadow-slate-950/20">
+                  <p class="text-sm text-slate-400">Próximo pago</p>
+                  <p class="mt-3 text-2xl font-semibold text-white">S/ 280.72</p>
+                </div>
+                <div class="rounded-3xl bg-slate-950/90 p-5 shadow-lg shadow-slate-950/20">
+                  <p class="text-sm text-slate-400">Recompensa KTX</p>
+                  <p class="mt-3 text-2xl font-semibold text-white">8.2%</p>
+                </div>
+              </div>
+              <div class="rounded-3xl bg-slate-950/90 p-6 shadow-lg shadow-slate-950/20">
+                <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Resumen</p>
+                <div class="mt-4 flex items-center justify-between text-slate-300">
+                  <span>Inversiones</span>
+                  <span>S/ 5,870</span>
+                </div>
+                <div class="mt-3 flex items-center justify-between text-slate-300">
+                  <span>Créditos</span>
+                  <span>S/ 2,120</span>
+                </div>
+                <div class="mt-3 flex items-center justify-between text-slate-300">
+                  <span>Tiendas digitales</span>
+                  <span>S/ 1,845</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="investors" class="mt-20 space-y-10">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Usuarios activos generando ganancias mensuales</p>
+              <h2 class="mt-3 text-3xl font-semibold text-white">Inversionistas top en KTX</h2>
+            </div>
+            <p class="max-w-xl text-sm leading-6 text-slate-400">
+              Descubre cómo nuestros miembros están aprovechando KTX para invertir, comprar y construir su reputación financiera dentro de una sola plataforma.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/25 transition duration-300 hover:-translate-y-1 hover:border-amber-500/40">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xl font-semibold text-white">Jhonnier</p>
+                  <p class="mt-1 text-sm text-slate-400">Bajo Riesgo</p>
+                  
+                </div>
+                <div class="rounded-3xl bg-amber-500/15 px-3 py-1 text-sm font-semibold text-amber-200">Activo</div>
+              </div>
+              <div class="mt-8 space-y-4">
+                <p class="text-4xl font-semibold text-white">S/ 2,178.20</p>
+                <p class="text-sm text-slate-400">+S/ 30.49 Ganancia Mensual</p>
+                <div class="rounded-3xl bg-slate-950/80 px-4 py-3 text-sm text-slate-300">
+                  Estrategia de crecimiento seguro con rendimiento constante.
+                </div>
+              </div>
+            </article>
+            <article class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/25 transition duration-300 hover:-translate-y-1 hover:border-amber-500/40">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xl font-semibold text-white">Aldair</p>
+                  <p class="mt-1 text-sm text-slate-400">Medio Riesgo</p>
+                </div>
+                <div class="rounded-3xl bg-amber-500/15 px-3 py-1 text-sm font-semibold text-amber-200">Crecimiento</div>
+              </div>
+              <div class="mt-8 space-y-4">
+                <p class="text-4xl font-semibold text-white">S/ 1,922.91</p>
+                <p class="text-sm text-slate-400">+S/ 215.37 Ganancia Mensual</p>
+                <div class="rounded-3xl bg-slate-950/80 px-4 py-3 text-sm text-slate-300">
+                  Equilibrio entre mayor rendimiento y control de riesgo.
+                </div>
+              </div>
+            </article>
+            <article class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/25 transition duration-300 hover:-translate-y-1 hover:border-amber-500/40">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xl font-semibold text-white">Kris</p>
+                  <p class="mt-1 text-sm text-slate-400">Bajo Riesgo</p>
+                </div>
+                <div class="rounded-3xl bg-slate-700/60 px-3 py-1 text-sm font-semibold text-slate-100">Estable</div>
+              </div>
+              <div class="mt-8 space-y-4">
+                <p class="text-4xl font-semibold text-white">S/ 535.57</p>
+                <p class="text-sm text-slate-400">+S/ 7.50 Ganancia Mensual</p>
+                <div class="rounded-3xl bg-slate-950/80 px-4 py-3 text-sm text-slate-300">
+                  Ganancias estables con un enfoque conservador.
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Tipos de inversiones Riesgos!</p>
+
+          <div class="grid gap-5 lg:grid-cols-3">
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+              <p class="text-lg font-semibold text-white">Bajo Riesgo</p>
+              <p class="mt-3 text-sm text-slate-400">Ganancias pequeñas pero constantes</p>
+              <ul class="mt-5 space-y-3 text-sm text-slate-300">
+                <li>Diaria: 0.05%</li>
+                <li>Semanal: 0.35%</li>
+                <li>Mensual: 1.4%</li>
+              </ul>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 border border-amber-400/20">
+              <p class="text-lg font-semibold text-white">Medio Riesgo</p>
+              <p class="mt-3 text-sm text-slate-400">Mejor rendimiento con riesgo moderado</p>
+              <ul class="mt-5 space-y-3 text-sm text-slate-300">
+                <li>Diaria: 0.4%</li>
+                <li>Semanal: 2.8%</li>
+                <li>Mensual: 11.2%</li>
+              </ul>
+              <p class="mt-4 text-sm text-amber-300">⚠ Incluye posibilidad de pérdidas</p>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 border border-rose-500/20">
+              <p class="text-lg font-semibold text-white">Alto Riesgo</p>
+              <p class="mt-3 text-sm text-slate-400">Retornos muy altos con alta volatilidad</p>
+              <ul class="mt-5 space-y-3 text-sm text-slate-300">
+                <li>Diaria: 10%</li>
+                <li>Semanal: 70%</li>
+                <li>Mensual: 280%</li>
+              </ul>
+              <p class="mt-4 text-sm text-rose-300">⚠ Alto riesgo – sujeto a condiciones</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="debts" class="mt-20 space-y-10">
+          <div class="grid gap-6 lg:grid-cols-[1.6fr_1fr]">
+            <div class="space-y-4">
+              <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Activos de deuda</p>
+              <h2 class="text-3xl font-semibold text-white">Deudores activos y su perfil</h2>
+              <p class="max-w-2xl text-slate-400">
+                Visualiza los hábitos de pago y el riesgo asociado a cada cliente para tomar decisiones más seguras dentro de KTX.
+              </p>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+              <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Sistema de crédito</p>
+              <h3 class="mt-4 text-xl font-semibold text-white">Tu historial crediticio define el monto que puedes solicitar</h3>
+              <div class="mt-6 space-y-3 text-sm text-slate-300">
+                <div class="flex items-center justify-between rounded-3xl bg-slate-950/90 px-4 py-3">
+                  <span>1000–750</span><span>S/1000–1200</span>
+                </div>
+                <div class="flex items-center justify-between rounded-3xl bg-slate-950/90 px-4 py-3">
+                  <span>750–500</span><span>S/750–800</span>
+                </div>
+                <div class="flex items-center justify-between rounded-3xl bg-slate-950/90 px-4 py-3">
+                  <span>500–250</span><span>S/500–550</span>
+                </div>
+                <div class="flex items-center justify-between rounded-3xl bg-slate-950/90 px-4 py-3">
+                  <span>250–100</span><span>S/100–110</span>
+                </div>
+                <div class="flex items-center justify-between rounded-3xl bg-slate-950/90 px-4 py-3">
+                  <span>50–10</span><span>S/10–10.5</span>
+                </div>
+              </div>
+                <p class="mt-5 rounded-3xl bg-amber-500/10 px-4 py-3 text-sm text-amber-200">
+                Pagar tus deudas mejora tu reputación y desbloquea beneficios.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <article class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-lg font-semibold text-white">Juan_D</p>
+                  <p class="text-sm text-slate-400">Historial: 340 — Riesgo Alto</p>
+                </div>
+                <span class="rounded-full bg-rose-500/15 px-3 py-1 text-xs uppercase tracking-[0.2em] text-rose-300">Alto</span>
+              </div>
+              <div class="mt-6 space-y-3 text-slate-300">
+                <p>Monto: <span class="font-semibold text-white">S/ 293.86</span></p>
+                <p>Inicio: <span class="font-semibold text-white">27/12/2025</span></p>
+                <p>Interés: <span class="font-semibold text-white">10%</span></p>
+              </div>
+            </article>
+            <article class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-lg font-semibold text-white">Kris</p>
+                  <p class="text-sm text-slate-400">Historial: 760 — Riesgo Nulo</p>
+                </div>
+                <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs uppercase tracking-[0.2em] text-emerald-200">Nulo</span>
+              </div>
+              <div class="mt-6 space-y-3 text-slate-300">
+                <p>Monto: <span class="font-semibold text-white">S/ 336.06</span></p>
+                <p>Inicio: <span class="font-semibold text-white">31/10/2025</span></p>
+                <p>Interés: <span class="font-semibold text-white">0.00%</span></p>
+              </div>
+            </article>
+            <article class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-lg font-semibold text-white">Miguel</p>
+                  <p class="text-sm text-slate-400">Historial: 710 — Riesgo Bajo</p>
+                </div>
+                <span class="rounded-full bg-sky-500/15 px-3 py-1 text-xs uppercase tracking-[0.2em] text-sky-200">Bajo</span>
+              </div>
+              <div class="mt-6 space-y-3 text-slate-300">
+                <p>Monto: <span class="font-semibold text-white">S/ 288.84</span></p>
+                <p>Inicio: <span class="font-semibold text-white">07/12/2025</span></p>
+                <p>Interés: <span class="font-semibold text-white">10%</span></p>
+              </div>
+            </article>
+          </div>
+
+          <div class="rounded-[2rem] border border-amber-400/15 bg-slate-950/80 p-6 shadow-xl shadow-amber-400/10">
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p class="text-sm uppercase tracking-[0.3em] text-amber-300">VIP / Usuarios Pagados</p>
+                <h3 class="mt-3 text-3xl font-semibold text-white">Reconocimiento VIP</h3>
+                <p class="mt-3 max-w-2xl text-slate-300">
+                  Estos usuarios ya pagaron su deuda y acceden a beneficios exclusivos dentro de KTX.</p>
+              </div>
+              <div class="rounded-3xl bg-amber-400/10 p-4 text-center text-sm text-amber-100">
+                <p class="font-semibold">VIP badge</p>
+                <p>Gold styling para clientes prioritarios</p>
+              </div>
+            </div>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-[1.8rem] bg-slate-900/90 p-5 text-slate-200 shadow-lg shadow-slate-950/30">
+                <div class="flex items-center justify-between">
+                  <p class="text-lg font-semibold">Jhonnier</p>
+                  <span class="rounded-full bg-amber-500/20 px-3 py-1 text-xs uppercase text-amber-200">VIP</span>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">🎉 Pagó toda su deuda</p>
+                <p class="mt-3 text-sm text-slate-400">Historial: 1000 — VIP</p>
+              </div>
+              <div class="rounded-[1.8rem] bg-slate-900/90 p-5 text-slate-200 shadow-lg shadow-slate-950/30">
+                <div class="flex items-center justify-between">
+                  <p class="text-lg font-semibold">Tayler</p>
+                  <span class="rounded-full bg-amber-500/20 px-3 py-1 text-xs uppercase text-amber-200">VIP</span>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">🎉 Pagó toda su deuda</p>
+                <p class="mt-3 text-sm text-slate-400">Historial: 910 — VIP</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="wallet" class="mt-20 grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+          <div class="space-y-6">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Wallet</p>
+            <h2 class="text-3xl font-semibold text-white">Guarda dinero, ahorra y recibe saldo extra</h2>
+            <p class="max-w-2xl text-slate-400">
+              La billetera de KTX es tu centro financiero para ahorrar ganancias de inversiones y recibir pagos extra con acceso a descuentos y promociones exclusivas.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <div class="glass rounded-3xl p-5 text-center shadow-xl shadow-slate-900/20">
+                <p class="text-lg font-semibold text-white">Guarda dinero</p>
+                <p class="mt-3 text-sm text-slate-400">Mantén tus fondos protegidos y listos para usar.</p>
+              </div>
+              <div class="glass rounded-3xl p-5 text-center shadow-xl shadow-slate-900/20">
+                <p class="text-lg font-semibold text-white">Ahorra ganancias</p>
+                <p class="mt-3 text-sm text-slate-400">Convierte tus inversiones en saldo disponible.</p>
+              </div>
+              <div class="glass rounded-3xl p-5 text-center shadow-xl shadow-slate-900/20">
+                <p class="text-lg font-semibold text-white">Saldo extra</p>
+                <p class="mt-3 text-sm text-slate-400">Recibe promociones desde S/10 con retiros disponibles.</p>
+              </div>
+            </div>
+          </div>
+          <div class="glass rounded-[2.5rem] border border-amber-500/20 p-8 shadow-2xl shadow-amber-500/10">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Beneficios</p>
+                <h3 class="mt-3 text-2xl font-semibold text-white">Descuentos y promociones exclusivas</h3>
+              </div>
+              <div class="rounded-full bg-amber-500/15 px-4 py-2 text-sm text-amber-200">Desde S/10</div>
+            </div>
+            <ul class="mt-6 space-y-4 text-slate-300">
+              <li class="flex gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-amber-400"></span>Acceso a descuentos</li>
+              <li class="flex gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-amber-400"></span>Promociones exclusivas</li>
+              <li class="flex gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-amber-400"></span>Retiro disponible desde S/10</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="store" class="mt-20 space-y-10">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Tienda digital</p>
+              <h2 class="mt-3 text-3xl font-semibold text-white">Compra cuentas de streaming y servicios digitales</h2>
+            </div>
+            <a href="#" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:bg-amber-300">
+              Explorar ofertas
+            </a>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-3">
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Streaming</p>
+              <h3 class="mt-4 text-2xl font-semibold text-white">Paquete Premium</h3>
+              <p class="mt-4 text-sm leading-6 text-slate-300">Accede a servicios digitales y contenido exclusivo con un precio especial para miembros KTX.</p>
+              <div class="mt-6 flex items-center gap-2 text-white">
+                <span class="text-4xl font-bold">S/ 12.99</span>
+                <span class="text-sm text-slate-400">/ mes</span>
+              </div>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition border border-amber-500/20">
+              <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Gaming</p>
+              <h3 class="mt-4 text-2xl font-semibold text-white">Cuenta premium</h3>
+              <p class="mt-4 text-sm leading-6 text-slate-300">Compra servicios digitales para videojuegos con beneficios inmediatos.</p>
+              <div class="mt-6 flex items-center gap-2 text-white">
+                <span class="text-4xl font-bold">S/ 19.90</span>
+                <span class="text-sm text-slate-400">/ oferta</span>
+              </div>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Servicios</p>
+              <h3 class="mt-4 text-2xl font-semibold text-white">Créditos digitales</h3>
+              <p class="mt-4 text-sm leading-6 text-slate-300">Compra con seguridad y recibe acceso directo a tus compras dentro de KTX.</p>
+              <div class="mt-6 flex items-center gap-2 text-white">
+                <span class="text-4xl font-bold">S/ 9.99</span>
+                <span class="text-sm text-slate-400">/ compra</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gaming" class="mt-20 space-y-10">
+          <div class="grid gap-6 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Gaming</p>
+              <h2 class="mt-3 text-3xl font-semibold text-white">Fortnite y Club de gaming</h2>
+              <p class="max-w-2xl text-slate-400">
+                Compra pavos, planes de club y paquetes con precio reducido para disfrutar más por menos.
+              </p>
+            </div>
+            <div class="rounded-3xl border border-slate-700/70 bg-slate-950/90 p-6 text-slate-300 shadow-xl shadow-slate-950/20">
+              <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Oferta</p>
+              <p class="mt-4 text-xl font-semibold text-white">Paquetes con 10% descuento</p>
+            </div>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-2">
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xl font-semibold text-white">100 Pavos</p>
+                  <p class="text-sm text-slate-400">vs S/ 3.56 normal</p>
+                </div>
+                <span class="rounded-3xl bg-amber-500/15 px-4 py-2 text-sm text-amber-200">S/ 2.00</span>
+              </div>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 hover:-translate-y-1 transition">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xl font-semibold text-white">1000 Pavos</p>
+                  <p class="text-sm text-slate-400">Precio reducido</p>
+                </div>
+                <span class="rounded-3xl bg-amber-500/15 px-4 py-2 text-sm text-amber-200">S/ 18.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-3">
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+              <p class="text-lg font-semibold text-white">1 mes</p>
+              <p class="mt-3 text-3xl font-bold text-amber-200">S/ 24.99</p>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20 border border-amber-500/20">
+              <p class="text-lg font-semibold text-white">2 meses</p>
+              <p class="mt-3 text-3xl font-bold text-amber-200">S/ 38.99</p>
+            </div>
+            <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+              <p class="text-lg font-semibold text-white">3 meses</p>
+              <p class="mt-3 text-3xl font-bold text-amber-200">S/ 59.99</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="discord" class="mt-20 rounded-[2.5rem] border border-amber-500/20 bg-slate-900/80 p-10 shadow-2xl shadow-amber-500/10">
+          <div class="grid gap-8 lg:grid-cols-[1.3fr_.7fr] lg:items-center">
+            <div class="space-y-4">
+              <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Comunidad</p>
+              <h2 class="text-3xl font-semibold text-white">Únete a nuestra comunidad para jugar, conversar y recibir soporte</h2>
+              <p class="max-w-2xl text-slate-400">
+                Un lugar donde los usuarios de KTX se conectan, comparten ofertas y reciben atención rápida desde Discord.
+              </p>
+            </div>
+            <div class="flex h-full items-center justify-center">
+              <a href="https://kpelotudos.wordpress.com/" target="_blank" rel="noreferrer" class="inline-flex w-full items-center justify-center rounded-full bg-amber-400 px-6 py-4 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/30 transition hover:bg-amber-300">
+                Unirse al Discord
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="trust" class="mt-20 grid gap-8 lg:grid-cols-3">
+          <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Métodos de pago</p>
+            <h3 class="mt-4 text-2xl font-semibold text-white">Yape, Plin y pagos rápidos</h3>
+            <p class="mt-4 text-slate-400">Transacciones seguras con los métodos más populares de Perú y soporte 24/7.</p>
+          </div>
+          <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Contacto</p>
+            <h3 class="mt-4 text-2xl font-semibold text-white">Asistencia directa</h3>
+            <p class="mt-4 text-slate-400">Soporte financiero y de gaming para ayudarte a operar con confianza en el ecosistema KTX.</p>
+          </div>
+          <div class="glass rounded-[2rem] p-6 shadow-xl shadow-slate-900/20">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Seguridad</p>
+            <h3 class="mt-4 text-2xl font-semibold text-white">Protección y control</h3>
+            <p class="mt-4 text-slate-400">Tus recursos se guardan con cifrado, monitoreo y controles de pago responsables.</p>
+          </div>
+        </section>
+
+        <section id="cta" class="mt-20 rounded-[2.5rem] border border-amber-500/20 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-slate-950/90 p-10 shadow-2xl shadow-amber-500/15">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-amber-200">Final CTA</p>
+              <h2 class="mt-3 text-3xl font-semibold text-white">Empieza ahora con KTX</h2>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a href="#store" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300">
+                Ir a tienda
+              </a>
+              <a href="#investors" class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/90 px-6 py-3 text-sm font-semibold text-white transition hover:border-amber-400 hover:text-amber-200">
+                Ver inversiones
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
